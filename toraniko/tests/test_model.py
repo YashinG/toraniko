@@ -1,5 +1,13 @@
 """Tests functions in the model module."""
 
+from pathlib import Path
+import sys
+
+# Allow running this test file directly via `python toraniko/tests/test_model.py`
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
+
 import polars as pl
 import pytest
 import numpy as np
